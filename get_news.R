@@ -1,6 +1,9 @@
 library(httr2)
 library(jsonlite)
 
+
+get_news <- function(query, datys_ago, page_size = 10)
+
 req <- request("https://newsapi.org/v2/everything")|>
   req_url_query(
     q = '`"data science"`',
